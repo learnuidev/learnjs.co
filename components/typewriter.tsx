@@ -22,6 +22,8 @@ export const Typewriter: React.FC<TypewriterProps> = ({
   const [isDeleting, setIsDeleting] = useState(false);
   const [showCursor, setShowCursor] = useState(true);
 
+  const currentText = texts[currentTextIndex];
+
   useEffect(() => {
     const currentText = texts[currentTextIndex];
 
@@ -62,14 +64,20 @@ export const Typewriter: React.FC<TypewriterProps> = ({
     pauseBetween,
   ]);
 
+  console.log("displayedText !== currentText", displayedText !== currentText);
+
   // Cursor blinking effect
   useEffect(() => {
     const cursorInterval = setInterval(() => {
-      setShowCursor((prev) => !prev);
+      if (displayedText !== currentText) {
+        setShowCursor(() => true);
+      } else {
+        setShowCursor((prev) => !prev);
+      }
     }, 530); // Blink every 530ms
 
     return () => clearInterval(cursorInterval);
-  }, []);
+  }, [currentText, displayedText]);
 
   return (
     <span className="relative text-pink-400 font-bold">
