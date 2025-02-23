@@ -18,8 +18,8 @@ export default function Home() {
         <Typewriter
           displayCursor={true}
           texts={texts}
-          typingSpeed={100}
-          deletingSpeed={100}
+          typingSpeed={80}
+          deletingSpeed={50}
           pauseBetween={3000}
         />
       </div>
