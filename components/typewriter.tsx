@@ -7,6 +7,7 @@ interface TypewriterProps {
   typingSpeed?: number;
   deletingSpeed?: number;
   pauseBetween?: number;
+  displayCursor?: boolean;
 }
 
 export const Typewriter: React.FC<TypewriterProps> = ({
@@ -14,6 +15,7 @@ export const Typewriter: React.FC<TypewriterProps> = ({
   typingSpeed = 50,
   deletingSpeed = 30,
   pauseBetween = 1500,
+  displayCursor = true,
 }) => {
   const [displayedText, setDisplayedText] = useState("");
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
@@ -70,14 +72,16 @@ export const Typewriter: React.FC<TypewriterProps> = ({
   }, []);
 
   return (
-    <span className="relative">
-      {displayedText || ".."}
-      <span
-        className={`absolute ${showCursor ? "opacity-100" : "opacity-0"} transition-opacity duration-100`}
-        style={{ marginLeft: "1px" }}
-      >
-        |
-      </span>
+    <span className="relative text-pink-400 font-bold">
+      {displayedText}
+      {displayCursor && (
+        <span
+          className={`absolute ${showCursor ? "opacity-100" : "opacity-0"} transition-opacity duration-100 text-gray-300`}
+          style={{ marginLeft: "1px" }}
+        >
+          |
+        </span>
+      )}
     </span>
   );
 };
