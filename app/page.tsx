@@ -16,7 +16,7 @@ export default function Home() {
       <div className="text-left font-mono mt-4 text-xl dark:text-gray-300">
         <span>I want to learn about </span>
         <Typewriter
-          displayCursor={false}
+          displayCursor={true}
           texts={texts}
           typingSpeed={100}
           deletingSpeed={100}
