@@ -2,6 +2,7 @@
 
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { useTranslation } from "@/lib/i18n-next/use-translation";
+import { cn } from "@/lib/utils";
 import { useListCourses } from "@/modules/courses/hooks/use-list-courses";
 import Link from "next/link";
 
@@ -27,7 +28,7 @@ export const Courses = () => {
             >
               <Card
                 key={course.id}
-                className="bg-white dark:bg-[rgb(11,12,13)] p-4 hover:scale-105 transition"
+                className={cn("p-4 hover:scale-105 transition", course.color)}
               >
                 <CardTitle>{course.title}</CardTitle>
 

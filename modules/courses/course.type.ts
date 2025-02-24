@@ -3,4 +3,6 @@ export type Course = {
   type: "free" | "paid";
   title: string;
   description: string;
+} & {
+  color?: string;
 };
