@@ -40,7 +40,7 @@ export const Courses = () => {
                 <div className="mt-4 flex justify-between w-full">
                   <span className="underline"> {t("common:learn.more")} </span>
 
-                  {course.type === "free" && t("courses:course.free")}
+                  {course.type === "free" && course.typeI18n}
                 </div>
               </Link>
             </Card>
