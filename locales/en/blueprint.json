@@ -1,0 +1,19 @@
+{
+  "blueprint.title": "The Blueprint",
+  "blueprint.description": "At learnjs.co our Blueprint is simple: Teaching Practical, Copy Pastable and Useful concepts based on Real World Examples.",
+
+  "blueprint.why.title": "Start with WHY?",
+  "blueprint.why.content.one": "Before we start teaching any concept, we always start this fundamental question: WHY? Why do we need to learn it? Asking allows us to establish the right context.",
+
+  "blueprint.why.content.two": "As a result you will be better prepping and motivated you for the actual learning material. If we dont know why we are learning, then its very easy to forget or even appreciate why we are learning it.",
+
+  "blueprint.practical.title": "Short, Practical based on Real World Codebase",
+  "blueprint.practical.content.one": "Before we start teaching any concept, we always start this fundamental question: WHY? Why do we need to learn it? Asking allows us to establish the right context.",
+  "blueprint.practical.content.two": "As a result you will be better prepping and motivated you for the actual learning material.",
+  "blueprint.practical.content.three": "If we dont know why we are learning, then its very easy to forget or even appreciate why we are learning it.",
+
+  "blueprint.learning-path.title": "Flexible Learning Path",
+  "blueprint.learning-path.content.one": "Each lesson is self contained, meaning it doesnt depend on any others.",
+  "blueprint.learning-path.content.two": "Whether you want to take the linear approach, or simply want to learn about specific concept, its up to YOU.",
+  "blueprint.learning-path.content.three": "You are incharge (and you should be) of your learning."
+}
