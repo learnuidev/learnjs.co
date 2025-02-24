@@ -24,7 +24,7 @@ export const CourseBanner = ({ course }: { course: Course }) => {
 
       <Button
         variant={"neutral"}
-        className="rounded-full mt-8 uppercase font-bold"
+        className="rounded-full mt-8 uppercase font-bold "
       >
         {t("common:start.this.course")}
       </Button>
