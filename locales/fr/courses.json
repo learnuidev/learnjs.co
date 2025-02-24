@@ -1,4 +1,18 @@
 {
   "courses.title": "cours",
-  "courses.description": "Nos cours sont conçus pour être pratiques et, surtout, amusants."
+  "courses.description": "Nos cours sont conçus pour être pratiques et, surtout, amusants.",
+  "course.paid": "payé",
+  "course.free": "gratuit",
+  "course1.title": "JS Appliqué",
+  "course1.description": "Apprenez les parties les plus utiles de JavaScript.",
+  "course2.title": "Gestion d'État dans React",
+  "course2.description": "Apprenez et maîtrisez la gestion d'état dans React.",
+  "course3.title": "JS : Les Parties Confuses",
+  "course3.description": "Élevez vos compétences en JavaScript au niveau supérieur en maîtrisant toutes les parties confuses.",
+  "course4.title": "Comprendre Posthog",
+  "course4.description": "Apprenez et maîtrisez Posthog.",
+  "course5.title": "Penser en JS",
+  "course5.description": "Découvrez comment les ingénieurs logiciels expérimentés pensent en Javascript.",
+  "course6.title": "Ingénieur Produit IA",
+  "course6.description": "Dans ce cours, vous apprendrez à appliquer vos compétences en javascript pour créer des produits alimentés par l'IA."
 }

@@ -1,4 +1,18 @@
 {
   "courses.title": "课程",
-  "courses.description": "我们的课程旨在实用且最重要的是有趣。"
+  "courses.description": "我们的课程旨在实用且最重要的是有趣。",
+  "course.paid": "付费",
+  "course.free": "免费",
+  "course1.title": "应用JavaScript",
+  "course1.description": "学习JavaScript中最有用的部分。",
+  "course2.title": "React中的状态管理",
+  "course2.description": "学习并掌握React中的状态管理。",
+  "course3.title": "JavaScript：令人困惑的部分",
+  "course3.description": "通过掌握所有令人困惑的部分，将你的JavaScript技能提升到一个新的水平。",
+  "course4.title": "理解Posthog",
+  "course4.description": "学习并掌握Posthog。",
+  "course5.title": "在JavaScript中思考",
+  "course5.description": "学习高级软件工程师如何在JavaScript中思考。",
+  "course6.title": "产品AI工程师",
+  "course6.description": "在这门课程中，你将学习如何运用你的JavaScript技能构建由AI驱动的产品。"
 }

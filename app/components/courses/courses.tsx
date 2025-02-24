@@ -2,11 +2,13 @@
 
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { useTranslation } from "@/lib/i18n-next/use-translation";
-import { courses } from "@/modules/courses/courses.mock";
+import { useListCourses } from "@/modules/courses/hooks/use-list-courses";
 import Link from "next/link";
 
 export const Courses = () => {
-  const { t } = useTranslation(["courses"]);
+  const { t } = useTranslation(["courses", "common"]);
+
+  const courses = useListCourses();
 
   return (
     <section className="h-screen" id="courses">
@@ -18,21 +20,27 @@ export const Courses = () => {
       <div className="grid lg:grid-cols-3 gap-8 mt-12">
         {courses.map((course) => {
           return (
-            <Card
+            <Link
+              href={`/c/${course.id}`}
               key={course.id}
-              className="bg-white dark:bg-[rgb(11,12,13)] p-4 hover:scale-105 transition"
+              className="inline-block h-auto"
             >
-              <CardTitle>{course.title}</CardTitle>
-
-              <CardDescription>{course.description}</CardDescription>
-
-              <Link
-                href={`/c/${course.id}`}
-                className="underline mt-4 text-sm flex gap-2 items-center"
+              <Card
+                key={course.id}
+                className="bg-white dark:bg-[rgb(11,12,13)] p-4 hover:scale-105 transition"
               >
-                <span> Learn More </span>
-              </Link>
-            </Card>
+                <CardTitle>{course.title}</CardTitle>
+
+                <CardDescription>{course.description}</CardDescription>
+
+                <Link
+                  href={`/c/${course.id}`}
+                  className="underline mt-4 text-sm flex gap-2 items-center"
+                >
+                  <span> {t("common:learn.more")} </span>
+                </Link>
+              </Card>
+            </Link>
           );
         })}
       </div>

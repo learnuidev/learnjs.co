@@ -4,10 +4,13 @@ import { Card } from "@/components/ui/card";
 import { useGetCourse } from "./hooks/use-get-course";
 import { useGetCourseParams } from "./hooks/use-get-course-params";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "@/lib/i18n-next/use-translation";
 
 export default function Page() {
   const { courseId } = useGetCourseParams();
   const course = useGetCourse(courseId);
+
+  const { t } = useTranslation(["common"]);
 
   return (
     <div>
@@ -19,7 +22,7 @@ export default function Page() {
         </p>
 
         <Button className="bg-yellow-500 rounded-full mt-8 uppercase font-bold">
-          Start this course
+          {t("common:start.this.course")}
         </Button>
       </Card>
     </div>

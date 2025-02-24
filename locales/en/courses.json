@@ -1,4 +1,24 @@
 {
   "courses.title": "courses",
-  "courses.description": "Our courses are designed to be practical and, most importantly, fun."
+  "courses.description": "Our courses are designed to be practical and, most importantly, fun.",
+  "course.paid": "paid",
+  "course.free": "free",
+
+  "course1.title": "Applied JS",
+  "course1.description": "Learn the most useful parts of JavaScript.",
+
+  "course2.title": "State Management in React",
+  "course2.description": "Learn and master state management in React.",
+
+  "course3.title": "JS: The Confusing Parts",
+  "course3.description": "Take your JavaScript skills to the next level by mastering all the confusing parts.",
+
+  "course4.title": "Grokking Posthog",
+  "course4.description": "Learn and master Posthog",
+
+  "course5.title": "Thinking in JS",
+  "course5.description": "Learn how senior Software Engineers think in Javascript",
+
+  "course6.title": "Product AI Engineer",
+  "course6.description": "In this course you will learn how to apply your javascript skills to build products powered by AI"
 }
