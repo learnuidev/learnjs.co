@@ -1,6 +1,6 @@
 import { cookies } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
-import { i18nConfig } from "./libs/i18n-next/i18n-config";
+import { i18nConfig } from "./lib/i18n-next/i18n-config";
 
 export async function middleware(request: NextRequest) {
   const current = (await cookies()).get(i18nConfig.cookieName)?.value;

@@ -1,4 +1,4 @@
-import { i18nOptions } from "@/libs/i18n-next/i18n-config";
+import { i18nOptions } from "@/lib/i18n-next/i18n-config";
 
 import banner from "@/locales/en/banner.json";
 import courses from "@/locales/en/courses.json";
@@ -12,4 +12,3 @@ declare module "i18next" {
     };
   }
 }
-

@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { FlipWords } from "@/components/ui/flip-words";
-import { useTranslation } from "@/libs/i18n-next/use-translation";
+import { useTranslation } from "@/lib/i18n-next/use-translation";
 import { useRouter } from "next/navigation";
 
 export const Banner = () => {

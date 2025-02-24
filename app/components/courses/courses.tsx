@@ -1,9 +1,11 @@
 "use client";
 
-import { useTranslation } from "@/libs/i18n-next/use-translation";
+import { useTranslation } from "@/lib/i18n-next/use-translation";
 
 export const Courses = () => {
   const { t } = useTranslation(["courses"]);
+
+  const courses = [{ id: "classic-js", title: "Classic JS" }];
   return (
     <section className="h-screen" id="courses">
       <h2 className="text-5xl font-bold">{t("courses:courses.title")}</h2>

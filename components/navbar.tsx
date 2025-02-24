@@ -1,4 +1,4 @@
-import { LanguageSwitcher } from "@/libs/i18n-next/language-switcher";
+import { LanguageSwitcher } from "@/lib/i18n-next/language-switcher";
 import { ToggleThemeDropdown } from "./toggle-theme-dropdown";
 
 export const NavBar = () => {
