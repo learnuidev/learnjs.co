@@ -20,7 +20,7 @@ export const Courses = () => {
           return (
             <Card
               key={course.id}
-              className="bg-white p-4 hover:scale-105 transition"
+              className="bg-white dark:bg-[rgb(11,12,13)] p-4 hover:scale-105 transition"
             >
               <CardTitle>{course.title}</CardTitle>
 
