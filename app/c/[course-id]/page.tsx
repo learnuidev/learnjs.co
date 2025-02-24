@@ -17,7 +17,7 @@ export default function Page() {
   }
 
   return (
-    <main>
+    <main className="lg:mx-32 mx-0">
       <PageTitle title={course.title} description={course.description} />
       <CourseBanner course={course} />
       <TheBlueprint />
