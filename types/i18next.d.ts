@@ -3,6 +3,7 @@ import { i18nOptions } from "@/libs/i18n-next/i18n-config";
 import banner from "@/locales/en/banner.json";
 import common from "@/locales/en/common.json";
 import courses from "@/locales/en/courses.json";
+import nothing from "@/locales/en/nothing.json";
 
 declare module "i18next" {
   interface CustomTypeOptions {
@@ -11,6 +12,7 @@ declare module "i18next" {
       banner: typeof banner;
       common: typeof common;
       courses: typeof courses;
+      nothing: typeof nothing;
     };
   }
 }
