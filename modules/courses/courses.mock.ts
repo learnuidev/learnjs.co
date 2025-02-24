@@ -1,23 +1,29 @@
-type Course = {
-  id: string;
-  title: string;
-  description: string;
-};
+import { Course } from "./course.type";
+
 export const courses: Course[] = [
   {
     id: "classic-js",
+    type: "paid",
     title: "Applied JS",
-    description: "Learn the most useful parts of the JS",
+    description: "Learn the most useful parts of JavaScript.",
   },
   {
     id: "state-management",
+    type: "paid",
     title: "State Management",
-    description: "Learn and Master State Management in React",
+    description: "Learn and master state management in React.",
   },
   {
     id: "advanced-js",
-    title: "JS, The Confusing Parts",
+    type: "paid",
+    title: "JS: The Confusing Parts",
     description:
-      "Take your JS skill to the next level by mastering all the confusing parts",
+      "Take your JavaScript skills to the next level by mastering all the confusing parts.",
+  },
+  {
+    id: "grokking-posthog",
+    type: "paid",
+    title: "Grokking Posthog",
+    description: "Learn and master Posthog",
   },
 ];
