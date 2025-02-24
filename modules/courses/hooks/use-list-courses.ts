@@ -9,7 +9,8 @@ export const useListCourses = () => {
   const courses: Course[] = [
     {
       id: "classic-js",
-      type: t("courses:course.paid"),
+      typeI18n: t("courses:course.paid"),
+      type: "paid",
       title: t("courses:course1.title"),
       description: t("courses:course1.description"),
       color,
@@ -17,6 +18,7 @@ export const useListCourses = () => {
     {
       id: "advanced-js",
       type: t("courses:course.paid"),
+      typeI18n: "paid",
       title: t("courses:course3.title"),
       description: t("courses:course3.description"),
       color,
@@ -24,6 +26,7 @@ export const useListCourses = () => {
     {
       id: "thinking-in-javascript",
       type: t("courses:course.paid"),
+      typeI18n: "paid",
       title: t("courses:course5.title"),
       description: t("courses:course5.description"),
       color,
@@ -31,34 +34,39 @@ export const useListCourses = () => {
     {
       id: "rwr",
       type: t("courses:course.paid"),
+      typeI18n: "paid",
       title: t("courses:course.react.title"),
       description: t("courses:course.react.description"),
       color,
     },
     {
       id: "promises",
-      type: t("courses:course.free"),
+      typeI18n: t("courses:course.free"),
+      type: "free",
       title: t("courses:course.promises.title"),
       description: t("courses:course.promises.description"),
       color,
     },
     {
       id: "closure",
-      type: t("courses:course.free"),
+      type: "free",
+      typeI18n: t("courses:course.free"),
       title: t("courses:course.closures.title"),
       description: t("courses:course.closures.description"),
       color,
     },
     {
       id: "product-js-engineer",
-      type: t("courses:course.paid"),
+      typeI18n: t("courses:course.paid"),
+      type: "paid",
       title: t("courses:course6.title"),
       description: t("courses:course6.description"),
       color,
     },
     {
       id: "state-management",
-      type: t("courses:course.paid"),
+      typeI18n: t("courses:course.paid"),
+      type: "paid",
       title: t("courses:course2.title"),
       description: t("courses:course2.description"),
       color,
@@ -66,7 +74,7 @@ export const useListCourses = () => {
 
     // {
     //   id: "grokking-posthog",
-    //   type: t("courses:course.paid"),
+    // type: t("courses:course.paid"),
     //   title: t("courses:course4.title"),
     //   description: t("courses:course4.description"),
     //   color,

@@ -5,4 +5,5 @@ export type Course = {
   description: string;
 } & {
   color?: string;
+  typeI18n?: string;
 };

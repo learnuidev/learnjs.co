@@ -1,6 +1,5 @@
 "use client";
 
-import { Badge } from "@/components/ui/badge";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { useTranslation } from "@/lib/i18n-next/use-translation";
 import { cn } from "@/lib/utils";
@@ -41,15 +40,7 @@ export const Courses = () => {
                 <div className="mt-4 flex justify-between w-full">
                   <span className="underline"> {t("common:learn.more")} </span>
 
-                  <Badge
-                    className={
-                      course.type === "free" ? "border-yellow-400" : ""
-                    }
-                    variant={"neutral"}
-                  >
-                    {" "}
-                    {course.type}
-                  </Badge>
+                  {course.type === "free" && t("courses:course.free")}
                 </div>
               </Link>
             </Card>
