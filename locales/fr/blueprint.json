@@ -1,0 +1,15 @@
+{
+  "blueprint.title": "Le Plan",
+  "blueprint.description": "Sur learnjs.co, notre Plan est simple : Enseigner des concepts pratiques, copiables et utiles basés sur des exemples du monde réel.",
+  "blueprint.why.title": "Commencer par le POURQUOI ?",
+  "blueprint.why.content.one": "Avant de commencer à enseigner un concept, nous commençons toujours par cette question fondamentale : POURQUOI ? Pourquoi avons-nous besoin de l'apprendre ? Poser cette question nous permet d'établir le bon contexte.",
+  "blueprint.why.content.two": "En conséquence, vous serez mieux préparé et motivé pour le matériel d'apprentissage réel. Si nous ne savons pas pourquoi nous apprenons, il est très facile d'oublier ou même de ne pas apprécier pourquoi nous l'apprenons.",
+  "blueprint.practical.title": "Court, Pratique, Basé sur du Code Réel",
+  "blueprint.practical.content.one": "Nous nous concentrons sur des leçons courtes et pratiques qui sont basées sur des bases de code du monde réel.",
+  "blueprint.practical.content.two": "Cette approche garantit que vous apprenez des compétences applicables qui sont immédiatement utiles dans des scénarios de développement réels.",
+  "blueprint.practical.content.three": "En ancrant nos leçons dans des exemples concrets, nous rendons le processus d'apprentissage plus pertinent et engageant.",
+  "blueprint.learning-path.title": "Parcours d'Apprentissage Flexible",
+  "blueprint.learning-path.content.one": "Chaque leçon est autonome, c'est-à-dire qu'elle ne dépend d'aucune autre.",
+  "blueprint.learning-path.content.two": "Que vous souhaitiez adopter une approche linéaire ou simplement apprendre un concept spécifique, c'est à VOUS de décider.",
+  "blueprint.learning-path.content.three": "Vous êtes responsable (et vous devriez l'être) de votre apprentissage."
+}

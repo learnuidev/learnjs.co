@@ -14,10 +14,13 @@ export function PageTitle({
   useEffect(() => {
     document.title = title;
   }, [title]);
-  return (
-    <Head key={document.title}>
-      <title>{document.title}</title>
-      <meta name="description" content={description} />
-    </Head>
-  );
+
+  if (document) {
+    return (
+      <Head>
+        <title>{document.title}</title>
+        <meta name="description" content={description} />
+      </Head>
+    );
+  }
 }
