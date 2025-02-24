@@ -2,6 +2,7 @@ import { i18nOptions } from "@/libs/i18n-next/i18n-config";
 
 import banner from "@/locales/en/banner.json";
 import common from "@/locales/en/common.json";
+import courseDetails from "@/locales/en/courseDetails.json";
 import courses from "@/locales/en/courses.json";
 import nothing from "@/locales/en/nothing.json";
 
@@ -11,6 +12,7 @@ declare module "i18next" {
     resources: {
       banner: typeof banner;
       common: typeof common;
+      courseDetails: typeof courseDetails;
       courses: typeof courses;
       nothing: typeof nothing;
     };

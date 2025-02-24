@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <I18NextHtmlProvider>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-100 dark:bg-[rgb(23,24,25)]`}
       >
         <ThemeProvider
           attribute="class"
