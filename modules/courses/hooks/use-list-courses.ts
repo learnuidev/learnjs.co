@@ -15,24 +15,10 @@ export const useListCourses = () => {
       color,
     },
     {
-      id: "state-management",
-      type: t("courses:course.paid"),
-      title: t("courses:course2.title"),
-      description: t("courses:course2.description"),
-      color,
-    },
-    {
       id: "advanced-js",
       type: t("courses:course.paid"),
       title: t("courses:course3.title"),
       description: t("courses:course3.description"),
-      color,
-    },
-    {
-      id: "grokking-posthog",
-      type: t("courses:course.paid"),
-      title: t("courses:course4.title"),
-      description: t("courses:course4.description"),
       color,
     },
     {
@@ -47,6 +33,21 @@ export const useListCourses = () => {
       type: t("courses:course.paid"),
       title: t("courses:course6.title"),
       description: t("courses:course6.description"),
+      color,
+    },
+    {
+      id: "state-management",
+      type: t("courses:course.paid"),
+      title: t("courses:course2.title"),
+      description: t("courses:course2.description"),
+      color,
+    },
+
+    {
+      id: "grokking-posthog",
+      type: t("courses:course.paid"),
+      title: t("courses:course4.title"),
+      description: t("courses:course4.description"),
       color,
     },
   ];

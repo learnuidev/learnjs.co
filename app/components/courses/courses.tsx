@@ -18,13 +18,13 @@ export const Courses = () => {
         {t("courses:courses.description")}
       </p>
 
-      <div className="grid lg:grid-cols-3 gap-8 mt-12">
+      <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-8 mt-12">
         {courses.map((course) => {
           return (
             <Card
               key={course.id}
               className={cn(
-                "rounded-2xl p-4 hover:scale-105 transition",
+                "rounded-2xl p-8 hover:scale-105 transition",
                 course.color
               )}
             >
