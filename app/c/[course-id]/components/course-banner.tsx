@@ -15,7 +15,7 @@ export const CourseBanner = ({ course }: { course: Course }) => {
         {course?.description}
       </p>
 
-      <Button className="bg-yellow-500 rounded-full mt-8 uppercase font-bold">
+      <Button className="hover:bg-yellow-500 bg-white rounded-full mt-8 uppercase font-bold">
         {t("common:start.this.course")}
       </Button>
     </Card>
