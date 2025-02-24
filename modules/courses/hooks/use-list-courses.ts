@@ -31,6 +31,16 @@ export const useListCourses = () => {
       description: t("courses:course5.description"),
       color,
     },
+
+    {
+      id: "fjs",
+      typeI18n: t("courses:course.paid"),
+      type: "paid",
+      title: t("courses:course.fjs.title"),
+      description: t("courses:course.fjs.description"),
+      color,
+    },
+
     {
       id: "rwr",
       type: t("courses:course.paid"),

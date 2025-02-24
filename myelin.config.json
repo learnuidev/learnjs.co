@@ -5,17 +5,9 @@
     "type": "local"
   },
   "locale": {
-    "sourceEntries": [
-      "app",
-      "components",
-      "lib"
-    ],
+    "sourceEntries": ["app", "components", "lib", "modules"],
     "location": "locales",
     "sourceLanguage": "en",
-    "targetLanguages": [
-      "fr",
-      "es",
-      "zh"
-    ]
+    "targetLanguages": ["fr", "es", "zh"]
   }
 }
