@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "learnjs",
+  title: "learnjs.co | Master JavaScript",
   description: "making js education practical and fun",
 };
 
