@@ -14,5 +14,13 @@
   "course5.title": "在JavaScript中思考",
   "course5.description": "学习高级软件工程师如何在JavaScript中思考。",
   "course6.title": "产品AI工程师",
-  "course6.description": "在这门课程中，你将学习如何运用你的JavaScript技能构建由AI驱动的产品。"
+  "course6.description": "在这门课程中，你将学习如何运用你的JavaScript技能构建由AI驱动的产品。",
+  "course.react.title": "真实世界的React",
+  "course.react.description": "通过学习阅读真实世界的React项目，从0到100。",
+  "course.fjs.title": "函数式JavaScript",
+  "course.fjs.description": "学习JavaScript中的函数式编程。",
+  "course.promises.title": "JavaScript承诺",
+  "course.promises.description": "通过构建承诺来学习JavaScript承诺。",
+  "course.closures.title": "简单闭包",
+  "course.closures.description": "学习并掌握最强大的编程技巧之一。"
 }

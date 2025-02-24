@@ -5,7 +5,7 @@
   "course.free": "free",
 
   "course1.title": "Applied JS",
-  "course1.description": "Learn the most useful parts of JavaScript.",
+  "course1.description": "Learn and master the most useful parts of JavaScript.",
 
   "course2.title": "State Management in React",
   "course2.description": "Learn and master state management in React.",
@@ -14,11 +14,23 @@
   "course3.description": "Take your JavaScript skills to the next level by mastering all the confusing parts.",
 
   "course4.title": "Grokking Posthog",
-  "course4.description": "Learn and master Posthog",
+  "course4.description": "Learn and master Posthog.",
 
   "course5.title": "Thinking in JS",
-  "course5.description": "Learn how senior Software Engineers think in Javascript",
+  "course5.description": "Learn how senior software engineers think in JavaScript.",
 
   "course6.title": "Product AI Engineer",
-  "course6.description": "In this course you will learn how to apply your javascript skills to build products powered by AI"
+  "course6.description": "In this course, you will learn how to apply your JavaScript skills to build products powered by AI.",
+
+  "course.react.title": "Real World React",
+  "course.react.description": "Go from 0 to 100 by learning to read real world React projects.",
+
+  "course.fjs.title": "Functional JavaScript",
+  "course.fjs.description": "Learn functional programming in JavaScript.",
+
+  "course.promises.title": "JavaScript Promises",
+  "course.promises.description": "Learn JavaScript Promises by building them.",
+
+  "course.closures.title": "Simply Closures",
+  "course.closures.description": "Learn and master one of the most powerful programming techniques."
 }

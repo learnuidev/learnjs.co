@@ -14,5 +14,13 @@
   "course5.title": "Penser en JS",
   "course5.description": "Découvrez comment les ingénieurs logiciels expérimentés pensent en Javascript.",
   "course6.title": "Ingénieur Produit IA",
-  "course6.description": "Dans ce cours, vous apprendrez à appliquer vos compétences en javascript pour créer des produits alimentés par l'IA."
+  "course6.description": "Dans ce cours, vous apprendrez à appliquer vos compétences en javascript pour créer des produits alimentés par l'IA.",
+  "course.react.title": "React dans le monde réel",
+  "course.react.description": "Passez de 0 à 100 en apprenant à lire des projets React du monde réel.",
+  "course.fjs.title": "JavaScript fonctionnel",
+  "course.fjs.description": "Apprenez la programmation fonctionnelle en JavaScript.",
+  "course.promises.title": "Promesses JavaScript",
+  "course.promises.description": "Apprenez les promesses JavaScript en les construisant.",
+  "course.closures.title": "Ferme simplement",
+  "course.closures.description": "Apprenez et maîtrisez l'une des techniques de programmation les plus puissantes."
 }

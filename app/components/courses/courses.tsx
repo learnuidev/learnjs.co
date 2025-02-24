@@ -1,5 +1,6 @@
 "use client";
 
+import { Badge } from "@/components/ui/badge";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { useTranslation } from "@/lib/i18n-next/use-translation";
 import { cn } from "@/lib/utils";
@@ -18,7 +19,7 @@ export const Courses = () => {
         {t("courses:courses.description")}
       </p>
 
-      <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-8 mt-12">
+      <div className="grid md:grid-cols-3 lg:grid-cols-3 gap-8 mt-12">
         {courses.map((course) => {
           return (
             <Card
@@ -28,21 +29,28 @@ export const Courses = () => {
                 course.color
               )}
             >
-              <Link
-                href={`/c/${course.id}`}
-                key={course.id}
-                className="inline-block h-auto"
-              >
+              <Link href={`/c/${course.id}`} className="inline-block h-auto">
                 <CardTitle>{course.title}</CardTitle>
 
-                <CardDescription className="dark:text-gray-400">
+                <CardDescription className="dark:text-gray-400 font-mono">
                   {course.description}
                 </CardDescription>
+              </Link>
 
-                <span className="underline mt-4 text-sm flex gap-2 items-center">
-                  {" "}
-                  {t("common:learn.more")}{" "}
-                </span>
+              <Link href={`/c/${course.id}`}>
+                <div className="mt-4 flex justify-between w-full">
+                  <span className="underline"> {t("common:learn.more")} </span>
+
+                  <Badge
+                    className={
+                      course.type === "free" ? "border-yellow-400" : ""
+                    }
+                    variant={"neutral"}
+                  >
+                    {" "}
+                    {course.type}
+                  </Badge>
+                </div>
               </Link>
             </Card>
           );

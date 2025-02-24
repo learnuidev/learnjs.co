@@ -29,6 +29,27 @@ export const useListCourses = () => {
       color,
     },
     {
+      id: "rwr",
+      type: t("courses:course.paid"),
+      title: t("courses:course.react.title"),
+      description: t("courses:course.react.description"),
+      color,
+    },
+    {
+      id: "promises",
+      type: t("courses:course.free"),
+      title: t("courses:course.promises.title"),
+      description: t("courses:course.promises.description"),
+      color,
+    },
+    {
+      id: "closure",
+      type: t("courses:course.free"),
+      title: t("courses:course.closures.title"),
+      description: t("courses:course.closures.description"),
+      color,
+    },
+    {
       id: "product-js-engineer",
       type: t("courses:course.paid"),
       title: t("courses:course6.title"),
@@ -43,13 +64,13 @@ export const useListCourses = () => {
       color,
     },
 
-    {
-      id: "grokking-posthog",
-      type: t("courses:course.paid"),
-      title: t("courses:course4.title"),
-      description: t("courses:course4.description"),
-      color,
-    },
+    // {
+    //   id: "grokking-posthog",
+    //   type: t("courses:course.paid"),
+    //   title: t("courses:course4.title"),
+    //   description: t("courses:course4.description"),
+    //   color,
+    // },
   ];
 
   return courses;
