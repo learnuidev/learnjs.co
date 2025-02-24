@@ -36,10 +36,7 @@ export function LanguageSwitcher() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button
-          className="rounded-full hover:bg-yellow-500 transition"
-          variant={"neutral"}
-        >
+        <Button className="rounded-full  transition" variant={"neutral"}>
           <div className="">{languagesList[selectedItem]}</div>
         </Button>
       </DropdownMenuTrigger>
