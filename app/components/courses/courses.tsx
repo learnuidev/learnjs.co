@@ -21,27 +21,30 @@ export const Courses = () => {
       <div className="grid lg:grid-cols-3 gap-8 mt-12">
         {courses.map((course) => {
           return (
-            <Link
-              href={`/c/${course.id}`}
+            <Card
               key={course.id}
-              className="inline-block h-auto"
+              className={cn(
+                "rounded-2xl p-4 hover:scale-105 transition",
+                course.color
+              )}
             >
-              <Card
+              <Link
+                href={`/c/${course.id}`}
                 key={course.id}
-                className={cn("p-4 hover:scale-105 transition", course.color)}
+                className="inline-block h-auto"
               >
                 <CardTitle>{course.title}</CardTitle>
 
-                <CardDescription>{course.description}</CardDescription>
+                <CardDescription className="dark:text-gray-400">
+                  {course.description}
+                </CardDescription>
 
-                <Link
-                  href={`/c/${course.id}`}
-                  className="underline mt-4 text-sm flex gap-2 items-center"
-                >
-                  <span> {t("common:learn.more")} </span>
-                </Link>
-              </Card>
-            </Link>
+                <span className="underline mt-4 text-sm flex gap-2 items-center">
+                  {" "}
+                  {t("common:learn.more")}{" "}
+                </span>
+              </Link>
+            </Card>
           );
         })}
       </div>

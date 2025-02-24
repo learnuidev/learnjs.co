@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "learn javascript",
-  description: "learn javascript, interactively",
+  title: "learnjs",
+  description: "making js education practical and fun",
 };
 
 export default function RootLayout({
