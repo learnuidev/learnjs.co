@@ -36,7 +36,7 @@ export function LanguageSwitcher() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" className="rounded-full">
+        <Button className="">
           <div className="">{languagesList[selectedItem]}</div>
         </Button>
       </DropdownMenuTrigger>
