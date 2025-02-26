@@ -36,6 +36,7 @@ export function V() {
 
         <div className="col-span-12 sm:col-span-5 flex flex-col gap-8">
           <VStep step={step} />
+
           <VScope step={step} />
           <VConsole logs={logs} error={error} />
         </div>
