@@ -7,8 +7,9 @@ import { Card } from "@/components/ui/card";
 import { useTranslation } from "@/lib/i18n-next/use-translation";
 import { cn } from "@/lib/utils";
 import { DogIcon } from "lucide-react";
+import { NotStarted } from "./not-started";
 
-export const VConsole = ({ error, logs }: any) => {
+export const VConsole = ({ error, logs, step }: any) => {
   const { t } = useTranslation(["v"]);
 
   return (
@@ -16,49 +17,54 @@ export const VConsole = ({ error, logs }: any) => {
       <h4 className="font-bold text-2xl">{t("v:console")} </h4>
 
       <div className="mt-4 space-y-4 text-xl">
-        {error && (
-          <div>
-            <code className="text-red-400">
-              <pre>{error.message}</pre>
-            </code>
-          </div>
-        )}
-        {logs?.length === 0 ? (
-          <div className="flex items-center justify-center gap-2 my-16 text-[16px] text-gray-500">
-            <span className="font-bold">
-              <DogIcon />
-            </span>
+        <NotStarted step={step}>
+          {error && (
+            <div>
+              <code className="text-red-400">
+                <pre>{error.message}</pre>
+              </code>
+            </div>
+          )}
+          {logs?.length === 0 ? (
+            <div className="flex items-center justify-center gap-2 my-16 text-[16px] text-gray-500">
+              <span className="font-bold">
+                <DogIcon />
+              </span>
 
-            <span> {t("v:nothing.logged")}</span>
-          </div>
-        ) : (
-          logs.map((items: any, i: any) => {
-            return (
-              <div
-                key={i}
-                className={cn(i !== 0 && "border-t-2 border-gray-500", "pt-4")}
-              >
-                {items.map((item: any, idx: any) => {
-                  return (
-                    <div key={i}>
-                      <code>
-                        <pre>
-                          {JSON.stringify(
-                            item,
-                            function (k, v) {
-                              return v === undefined ? "undefined" : v;
-                            },
-                            4
-                          )}
-                        </pre>
-                      </code>
-                    </div>
-                  );
-                })}
-              </div>
-            );
-          })
-        )}
+              <span> {t("v:nothing.logged")}</span>
+            </div>
+          ) : (
+            logs.map((items: any, i: any) => {
+              return (
+                <div
+                  key={i}
+                  className={cn(
+                    i !== 0 && "border-t-2 border-gray-500",
+                    "pt-4"
+                  )}
+                >
+                  {items.map((item: any, idx: any) => {
+                    return (
+                      <div key={i}>
+                        <code>
+                          <pre>
+                            {JSON.stringify(
+                              item,
+                              function (k, v) {
+                                return v === undefined ? "undefined" : v;
+                              },
+                              4
+                            )}
+                          </pre>
+                        </code>
+                      </div>
+                    );
+                  })}
+                </div>
+              );
+            })
+          )}
+        </NotStarted>
       </div>
     </Card>
   );

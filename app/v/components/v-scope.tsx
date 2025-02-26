@@ -21,13 +21,9 @@ export const VScope = ({
   return (
     <Card className="bg-white dark:bg-black dark:text-white p-4">
       <h4 className="font-bold text-2xl">{t("v:scope")} </h4>
-      {step?.category === "init" ? (
-        <div className="my-16">
-          <NotStarted />
-        </div>
-      ) : (
+      <NotStarted step={step}>
         <ScopeList step={step} steps={steps} at={at} />
-      )}
+      </NotStarted>
     </Card>
   );
 };
