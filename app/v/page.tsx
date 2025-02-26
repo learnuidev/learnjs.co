@@ -75,8 +75,6 @@ export default function V() {
   const step =
     steps && steps[Math.max(0, Math.min(steps.length - 1, Math.round(at)))];
 
-  console.log("STEP", step);
-
   const logs = (steps || [])
     .slice(0, step?.num + 1)
     .map((s: any) => s?.logs || [])
@@ -102,7 +100,6 @@ export default function V() {
                 set_code(str);
               }}
               highlight={(code) => {
-                // console.log("INNER CODE", code);
                 return <Highlight code={code} step={step} />;
               }}
               padding={24}
@@ -173,7 +170,6 @@ export default function V() {
                     const stringifiedScope = JSON.stringify(
                       scope,
                       function (k, v) {
-                        console.log("V", v);
                         return v === undefined
                           ? "undefined"
                           : typeof v === "function"
@@ -191,7 +187,6 @@ export default function V() {
                       2: "bg-orange-400",
                     } as any;
 
-                    console.log("SCOPE", stringifiedScope);
                     return (
                       <div
                         key={`${idx}-${Date.now()}`}
