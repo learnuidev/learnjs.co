@@ -17,8 +17,6 @@ import theme from "./theme";
 const hpad = 3;
 const vpad = 1;
 
-console.log("LANGUA", languages);
-
 export function Highlight({ code, step }) {
   const container = useRef();
   const [h, set_h] = useState(0);

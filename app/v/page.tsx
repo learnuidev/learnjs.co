@@ -16,6 +16,7 @@ import { useThrottle } from "react-use";
 import { useMostRecent } from "./hooks/use-most-recent";
 import { Card } from "@/components/ui/card";
 import theme from "./components/theme";
+import "./prism.css";
 import {
   JsonView,
   allExpanded,
@@ -80,18 +81,22 @@ export default function V() {
     .map((s: any) => s?.logs || [])
     .flat();
 
+  console.log("LOGS", logs);
+
   return (
     <main className="mt-4 mx-0 mb-8">
       <section className="mt-8">
-        <Slider
-          className="mt-12"
-          max={steps?.length}
-          value={[at]}
-          onValueChange={(value) => {
-            set_at(value[0]);
-          }}
-        />
+        <div className="flex gap-12 items-center flex-row mt-12">
+          <Slider
+            max={steps?.length}
+            value={[at]}
+            onValueChange={(value) => {
+              set_at(value[0]);
+            }}
+          />
 
+          <p className="text-4xl font-bold">{at}</p>
+        </div>
         <div className="grid grid-cols-12 mt-12 gap-8">
           <Card className="col-span-12 sm:col-span-8 bg-white dark:bg-black dark:text-white">
             <Editor
@@ -256,6 +261,13 @@ export default function V() {
               <h4 className="font-bold text-2xl">Console </h4>
 
               <div className="mt-4 space-y-4">
+                {error && (
+                  <div>
+                    <code className="text-red-400">
+                      <pre>{JSON.stringify(error.message)}</pre>
+                    </code>
+                  </div>
+                )}
                 {logs.map((items: any, i: any) => {
                   return (
                     <div
