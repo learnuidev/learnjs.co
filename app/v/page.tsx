@@ -98,7 +98,7 @@ export default function V() {
           <p className="text-4xl font-bold">{at}</p>
         </div>
         <div className="grid grid-cols-12 mt-12 gap-8">
-          <Card className="col-span-12 sm:col-span-8 bg-white dark:bg-black dark:text-white">
+          <Card className="col-span-12 sm:col-span-7 bg-white dark:bg-black dark:text-white">
             <Editor
               value={code}
               onValueChange={(str) => {
@@ -118,7 +118,7 @@ export default function V() {
             />
           </Card>
 
-          <div className="col-span-12 sm:col-span-4 flex flex-col gap-8">
+          <div className="col-span-12 sm:col-span-5 flex flex-col gap-8">
             <Card className="bg-white dark:bg-black dark:text-white p-4 h-44">
               <h4 className="font-bold text-2xl">Step </h4>
 
@@ -196,7 +196,7 @@ export default function V() {
                       <div
                         key={`${idx}-${Date.now()}`}
                         className={cn(
-                          "bg-yellow-400 p-4 rounded-xl",
+                          "bg-yellow-400 p-4 rounded-xl dark:text-black",
                           isGlobalScope ? "bg-yellow-400" : styleMap[idx]
                         )}
 
@@ -264,7 +264,7 @@ export default function V() {
                 {error && (
                   <div>
                     <code className="text-red-400">
-                      <pre>{JSON.stringify(error.message)}</pre>
+                      <pre>{error.message}</pre>
                     </code>
                   </div>
                 )}
