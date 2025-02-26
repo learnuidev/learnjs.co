@@ -20,7 +20,7 @@ export function VEditor({ at, code, set_at, step, set_code }: any) {
   };
 
   return (
-    <Card className="col-span-12 sm:col-span-7 bg-white dark:bg-black dark:text-white">
+    <Card className="col-span-12 sm:col-span-7 bg-white dark:bg-black dark:text-white h-fit">
       <Editor
         value={code}
         onValueChange={updateEditor}
