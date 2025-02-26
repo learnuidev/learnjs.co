@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
@@ -25,7 +26,8 @@ import "react-json-view-lite/dist/index.css";
 import { cn } from "@/lib/utils";
 
 export default function V() {
-  const [code, set_code] = useCode(presets["Promise / fetch"]);
+  // @ts-ignore
+  const [code, set_code] = useCode(presets["Closure" || "Promise / fetch"]);
   const [cache, set_cache] = useState<any>({});
 
   const worker = useReplacableWorker((data: any) => {
@@ -118,33 +120,43 @@ export default function V() {
             <Card className="bg-white dark:bg-black dark:text-white p-4 h-44">
               <h4 className="font-bold text-2xl">Step </h4>
 
-              {step?.time && step?.category && step?.type ? (
-                <div>
-                  <p>
-                    <strong style={{ color: theme[step.time].fg }}>
-                      {step.time === "before"
-                        ? `about to ${
-                            step.category === "expression"
-                              ? "evaluate"
-                              : "execute"
-                          }`
-                        : step.category === "statement"
-                          ? "executed"
-                          : "evaluated"}
-                    </strong>{" "}
-                    {step.category}
-                    <br />
-                    <span>
-                      (of type <strong>{step.type}</strong>)
-                    </span>
-                  </p>
-                  {step.time === "after" && step.category === "expression" && (
-                    <p>&hellip;to the value:</p>
-                  )}
-                </div>
-              ) : (
-                <div>Not started </div>
-              )}
+              <div className="mt-4">
+                {step?.category === "init" ? (
+                  <div>init</div>
+                ) : step?.category === "wait" ? (
+                  <div>async operation waiting...</div>
+                ) : (
+                  step?.time &&
+                  step?.category &&
+                  step?.type && (
+                    <div>
+                      <p className="font-bold">{step.type}</p>
+                      <p>
+                        <strong style={{ color: theme[step.time].fg }}>
+                          {step.time === "before"
+                            ? `about to ${
+                                step.category === "expression"
+                                  ? "evaluate"
+                                  : "execute"
+                              }`
+                            : step.category === "statement"
+                              ? "executed"
+                              : "evaluated"}
+                        </strong>{" "}
+                        {step.category}
+                        <br />
+                        {/* <span>
+                        (of type <strong>{step.type}</strong>)
+                      </span> */}
+                      </p>
+                      {step.time === "after" &&
+                        step.category === "expression" && (
+                          <p>&hellip;to the value:</p>
+                        )}
+                    </div>
+                  )
+                )}
+              </div>
 
               {/* {step?.time === "after" && step?.category === "expression" && (
                 <div>{JSON.stringify(step?.value)}</div>
@@ -153,7 +165,7 @@ export default function V() {
             <Card className="bg-white dark:bg-black dark:text-white p-4">
               <h4 className="font-bold text-2xl">Scope </h4>
 
-              <div className="mt-4">
+              <div className="mt-4 space-y-4">
                 {step?.scopes &&
                   step?.scopes?.map((scope: any, idx: any, ctx: any) => {
                     const bindings = Object.entries(scope);
@@ -166,10 +178,22 @@ export default function V() {
                       4
                     );
 
+                    const isGlobalScope = idx === ctx?.length - 1;
+
+                    const styleMap = {
+                      0: "bg-blue-400",
+                      1: "bg-green-400",
+                      2: "bg-orange-400",
+                    } as any;
+
                     console.log("SCOPE", stringifiedScope);
                     return (
                       <div
                         key={`${idx}-${Date.now()}`}
+                        className={cn(
+                          "bg-yellow-400 p-4 rounded-xl",
+                          isGlobalScope ? "bg-yellow-400" : styleMap[idx]
+                        )}
 
                         // css={`
                         //   display: inline-block;
@@ -192,8 +216,6 @@ export default function V() {
                               style={{
                                 display: "flex",
                                 flexWrap: "wrap",
-                                paddingBottom:
-                                  i === bindings.length - 1 ? 0 : 10,
                               }}
                             >
                               <code>
@@ -219,6 +241,9 @@ export default function V() {
                         shouldExpandNode={allExpanded}
                         style={defaultStyles}
                       /> */}
+                        {isGlobalScope && (
+                          <div className="mb-2 font-bold"> global scope </div>
+                        )}
                         <code>
                           <pre>{stringifiedScope}</pre>
                         </code>
