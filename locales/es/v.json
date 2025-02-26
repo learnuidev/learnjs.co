@@ -10,5 +10,6 @@
   "about.to.execute": "a punto de ejecutar",
   "executed": "ejecutado",
   "evaluated": "evaluado",
-  "to.the.value": "...al valor:"
+  "to.the.value": "...al valor:",
+  "anonymous": "anónimo"
 }

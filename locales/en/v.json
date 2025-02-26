@@ -10,5 +10,6 @@
   "about.to.execute": "about to execute",
   "executed": "executed",
   "evaluated": "evaluated",
-  "to.the.value": "...to the value:"
+  "to.the.value": "...to the value:",
+  "anonymous": "anonymous"
 }

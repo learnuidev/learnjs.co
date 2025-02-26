@@ -22,6 +22,10 @@ import { undescribe } from "./utils/describe";
 import { useTranslation } from "@/lib/i18n-next/use-translation";
 import { DogIcon } from "lucide-react";
 
+function getConstructor(obj: any) {
+  return obj?.constructor?.name;
+}
+
 export default function V() {
   // @ts-ignore
   const [code, set_code] = useCode(presets["Closure" || "Promise / fetch"]);
@@ -169,17 +173,28 @@ export default function V() {
                         step.category === "expression" && (
                           <p>
                             {t("v:to.the.value")}{" "}
-                            <span>{JSON.stringify(step?.value)}</span>
+                            <span>
+                              {JSON.stringify(step?.value, function (k, v) {
+                                if (typeof v === "object") {
+                                  return `${step?.loc?.identifierName || v?.constructor?.name} object`;
+                                }
+
+                                if (typeof v === "function") {
+                                  if (v?.constructor?.name === "Promise") {
+                                    return "Promise";
+                                  }
+                                  return `${step?.loc?.identifierName || t("v:anonymous")} function`;
+                                }
+
+                                return v;
+                              })}
+                            </span>
                           </p>
                         )}
                     </div>
                   )
                 )}
               </div>
-
-              {/* {step?.time === "after" && step?.category === "expression" && (
-                <div>{JSON.stringify(step?.value)}</div>
-              )} */}
             </Card>
             <Card className="bg-white dark:bg-black dark:text-white p-4">
               <h4 className="font-bold text-2xl">{t("v:scope")} </h4>
