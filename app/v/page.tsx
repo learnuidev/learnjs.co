@@ -173,7 +173,12 @@ export default function V() {
                     const stringifiedScope = JSON.stringify(
                       scope,
                       function (k, v) {
-                        return v === undefined ? "undefined" : v;
+                        console.log("V", v);
+                        return v === undefined
+                          ? "undefined"
+                          : typeof v === "function"
+                            ? "function"
+                            : v;
                       },
                       4
                     );
