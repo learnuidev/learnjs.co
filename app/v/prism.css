@@ -12,7 +12,6 @@ pre[class*="language-"] {
   code[class*="language-"],
   pre[class*="language-"] {
     color: #fff;
-
     white-space: pre;
     overflow: hidden;
   }
@@ -131,19 +130,57 @@ pre[class*="language-"] {
   }
 }
 
+/* Custom colors */
+.token.function {
+  color: orange;
+}
+
+.token.number {
+  color: rgb(116, 42, 255);
+  font-weight: 300;
+}
+
+.dark {
+  .token.number {
+    color: rgb(165, 119, 251);
+  }
+}
+
+.token.string,
+.token.interpolation-punctuation.punctuation {
+  color: rgb(255, 132, 25);
+  font-weight: 300;
+}
+
+.dark {
+  .token.string,
+  .token.interpolation-punctuation.punctuation {
+    color: rgb(255, 173, 101);
+  }
+}
+
+.token.boolean {
+  color: teal !important;
+  font-weight: 300;
+}
+
+/* custom colors */
+
 .token.atrule,
 .token.keyword,
 .token.attr-name,
 .language-autohotkey .token.selector {
   font-weight: bold;
-  text-decoration: underline;
-  /* font-style: italic; */
+  /* text-decoration: underline; */
+  /* custom colors */
+  /* color: rgb(87, 69, 250); */
+  font-style: italic;
 }
 
 .token.function,
 .token.deleted,
 .language-autohotkey .token.tag {
-  /* color: #9a050f; */
+  color: #06b9ef;
 }
 
 .token.important,

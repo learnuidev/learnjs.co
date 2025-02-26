@@ -3,33 +3,30 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
+import { Card } from "@/components/ui/card";
 import { Slider } from "@/components/ui/slider";
+import { cn } from "@/lib/utils";
+import { useEffect, useState } from "react";
+import "react-json-view-lite/dist/index.css";
 import Editor from "react-simple-code-editor";
+import { useThrottle } from "react-use";
 import { Highlight } from "./components/highlight";
+import theme from "./components/theme";
 import { presets } from "./data/presets";
 import { useCode } from "./hooks/use-code";
+import { useMostRecent } from "./hooks/use-most-recent";
 import { useReplacableWorker } from "./hooks/use-replaceable-worker";
-import { useEffect, useState } from "react";
+import "./prism.css";
 import { add_waiting_time_steps } from "./utils/add-waiting-time-steps";
 import { undescribe } from "./utils/describe";
-import { useThrottle } from "react-use";
-import { useMostRecent } from "./hooks/use-most-recent";
-import { Card } from "@/components/ui/card";
-import theme from "./components/theme";
-import "./prism.css";
-import {
-  JsonView,
-  allExpanded,
-  darkStyles,
-  defaultStyles,
-} from "react-json-view-lite";
-import "react-json-view-lite/dist/index.css";
-import { cn } from "@/lib/utils";
+import { useTranslation } from "@/lib/i18n-next/use-translation";
 
 export default function V() {
   // @ts-ignore
   const [code, set_code] = useCode(presets["Closure" || "Promise / fetch"]);
   const [cache, set_cache] = useState<any>({});
+
+  const { t } = useTranslation(["v"]);
 
   const worker = useReplacableWorker((data: any) => {
     if (!data.error) {
@@ -81,8 +78,6 @@ export default function V() {
     .map((s: any) => s?.logs || [])
     .flat();
 
-  console.log("LOGS", logs);
-
   return (
     <main className="mt-4 mx-0 mb-8">
       <section className="mt-8">
@@ -120,7 +115,7 @@ export default function V() {
 
           <div className="col-span-12 sm:col-span-5 flex flex-col gap-8">
             <Card className="bg-white dark:bg-black dark:text-white p-4 h-44">
-              <h4 className="font-bold text-2xl">Step </h4>
+              <h4 className="font-bold text-2xl">{t("v:step")} </h4>
 
               <div className="mt-4">
                 {step?.category === "init" ? (
@@ -165,7 +160,7 @@ export default function V() {
               )} */}
             </Card>
             <Card className="bg-white dark:bg-black dark:text-white p-4">
-              <h4 className="font-bold text-2xl">Scope </h4>
+              <h4 className="font-bold text-2xl">{t("v:scope")} </h4>
 
               <div className="mt-4 space-y-4">
                 {step?.scopes &&
@@ -199,15 +194,6 @@ export default function V() {
                           "bg-yellow-400 p-4 rounded-xl dark:text-black",
                           isGlobalScope ? "bg-yellow-400" : styleMap[idx]
                         )}
-
-                        // css={`
-                        //   display: inline-block;
-                        //   margin-top: 10px;
-                        //   border: 2px solid ${j === 0 ? "black" : "#ccc"};
-                        //   ${j === 0 && "box-shadow: 0 2px 6px rgba(0, 0, 0, .2);"}
-                        //   padding: 10px;
-                        //   border-radius: 4px;
-                        // `}
                       >
                         {bindings.length === 0 && (
                           <p>
@@ -223,31 +209,16 @@ export default function V() {
                                 flexWrap: "wrap",
                               }}
                             >
-                              <code>
-                                {/* <pre>{value}</pre> */}
-
-                                {/* <JsonView
-                                data={value as any}
-                                shouldExpandNode={allExpanded}
-                                style={defaultStyles}
-                              /> */}
-                              </code>
-                              {/* <ObjectInspector
-                            theme={inspectorTheme}
-                            name={variable}
-                            data={value}
-                          /> */}
+                              <code></code>
                             </div>
                           );
                         })}
 
-                        {/* <JsonView
-                        data={scope}
-                        shouldExpandNode={allExpanded}
-                        style={defaultStyles}
-                      /> */}
                         {isGlobalScope && (
-                          <div className="mb-2 font-bold"> global scope </div>
+                          <div className="mb-2 font-bold">
+                            {" "}
+                            {t("v:global.scope")}{" "}
+                          </div>
                         )}
                         <code>
                           <pre>{stringifiedScope}</pre>
@@ -258,9 +229,9 @@ export default function V() {
               </div>
             </Card>
             <Card className="bg-white dark:bg-black dark:text-white p-4">
-              <h4 className="font-bold text-2xl">Console </h4>
+              <h4 className="font-bold text-2xl">{t("v:console")} </h4>
 
-              <div className="mt-4 space-y-4">
+              <div className="mt-4 space-y-4 text-xl">
                 {error && (
                   <div>
                     <code className="text-red-400">
@@ -272,16 +243,6 @@ export default function V() {
                   return (
                     <div
                       key={i}
-                      // style={{
-                      //   display: "flex",
-                      //   flexWrap: "wrap",
-                      //   paddingBottom: 10,
-                      //   ...(i !== 0 && {
-                      //     borderTop: "2px solid #ccc",
-                      //     paddingTop: 10,
-                      //   }),
-                      // }}
-
                       className={cn(
                         i !== 0 && "border-t-2 border-gray-500",
                         "pt-4"
@@ -290,8 +251,6 @@ export default function V() {
                       {items.map((item: any, idx: any) => {
                         return (
                           <div key={i}>
-                            {/* {JSON.stringify(item)} */}
-
                             <code>
                               <pre>
                                 {JSON.stringify(
@@ -303,12 +262,6 @@ export default function V() {
                                 )}
                               </pre>
                             </code>
-                            {/* <JsonView
-                            data={item}
-                            shouldExpandNode={allExpanded}
-                            style={defaultStyles}
-                          /> */}
-                            {/* <ObjectInspector theme={inspectorTheme} data={item} /> */}
                           </div>
                         );
                       })}

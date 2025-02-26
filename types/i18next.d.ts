@@ -6,6 +6,7 @@ import common from "@/locales/en/common.json";
 import courseDetails from "@/locales/en/courseDetails.json";
 import courses from "@/locales/en/courses.json";
 import nothing from "@/locales/en/nothing.json";
+import v from "@/locales/en/v.json";
 
 declare module "i18next" {
   interface CustomTypeOptions {
@@ -17,6 +18,7 @@ declare module "i18next" {
       courseDetails: typeof courseDetails;
       courses: typeof courses;
       nothing: typeof nothing;
+      v: typeof v;
     };
   }
 }
