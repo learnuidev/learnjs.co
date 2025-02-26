@@ -93,7 +93,7 @@ export default function V() {
         />
 
         <div className="grid grid-cols-12 mt-12 gap-8">
-          <Card className="col-span-8 bg-white dark:bg-black dark:text-white">
+          <Card className="col-span-12 sm:col-span-8 bg-white dark:bg-black dark:text-white">
             <Editor
               value={code}
               onValueChange={(str) => {
@@ -114,11 +114,11 @@ export default function V() {
             />
           </Card>
 
-          <div className="col-span-4 flex flex-col gap-8">
+          <div className="col-span-12 sm:col-span-4 flex flex-col gap-8">
             <Card className="bg-white dark:bg-black dark:text-white p-4 h-44">
               <h4 className="font-bold text-2xl">Step </h4>
 
-              {step?.time && step?.category && step?.type && (
+              {step?.time && step?.category && step?.type ? (
                 <div>
                   <p>
                     <strong style={{ color: theme[step.time].fg }}>
@@ -142,6 +142,8 @@ export default function V() {
                     <p>&hellip;to the value:</p>
                   )}
                 </div>
+              ) : (
+                <div>Not started </div>
               )}
 
               {/* {step?.time === "after" && step?.category === "expression" && (
