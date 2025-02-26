@@ -155,6 +155,16 @@ export default function V() {
                 {step?.scopes &&
                   step?.scopes?.map((scope: any, idx: any, ctx: any) => {
                     const bindings = Object.entries(scope);
+
+                    const stringifiedScope = JSON.stringify(
+                      scope,
+                      function (k, v) {
+                        return v === undefined ? "undefined" : v;
+                      },
+                      4
+                    );
+
+                    console.log("SCOPE", stringifiedScope);
                     return (
                       <div
                         key={`${idx}-${Date.now()}`}
@@ -208,7 +218,7 @@ export default function V() {
                         style={defaultStyles}
                       /> */}
                         <code>
-                          <pre>{JSON.stringify(scope, null, 4)}</pre>
+                          <pre>{stringifiedScope}</pre>
                         </code>
                       </div>
                     );
@@ -244,7 +254,15 @@ export default function V() {
                             {/* {JSON.stringify(item)} */}
 
                             <code>
-                              <pre>{JSON.stringify(item, null, 4)}</pre>
+                              <pre>
+                                {JSON.stringify(
+                                  item,
+                                  function (k, v) {
+                                    return v === undefined ? "undefined" : v;
+                                  },
+                                  4
+                                )}
+                              </pre>
                             </code>
                             {/* <JsonView
                             data={item}
