@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import { Slider } from "@/components/ui/slider";
@@ -14,31 +16,31 @@ import { useMostRecent } from "./hooks/use-most-recent";
 
 export default function V() {
   const [code, set_code] = useCode(presets["Promise / fetch"]);
-  const [cache, set_cache] = useState({});
+  const [cache, set_cache] = useState<any>({});
 
-  const worker = useReplacableWorker((data) => {
+  const worker = useReplacableWorker((data: any) => {
     if (!data.error) {
       data.steps = JSON.parse(data.steps);
-      data.steps.forEach((step) => {
+      data.steps.forEach((step: any) => {
         if ("value" in step) {
           step.value = undescribe(step.value);
         }
         if ("scopes" in step) {
-          step.scopes.forEach((scope) => {
+          step.scopes.forEach((scope: any) => {
             Object.keys(scope).forEach((key) => {
               scope[key] = undescribe(scope[key]);
             });
           });
         }
         if ("logs" in step) {
-          step.logs = step.logs.map((line) => {
-            return line.map((item) => undescribe(item));
+          step.logs = step.logs.map((line: any) => {
+            return line.map((item: any) => undescribe(item));
           });
         }
       });
       add_waiting_time_steps(data.steps);
     }
-    set_cache((cache) => {
+    set_cache((cache: any) => {
       return {
         ...cache,
         [data.code]: data,

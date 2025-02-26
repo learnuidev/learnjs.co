@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /*
 
     The visitor in bird's eye view:
@@ -32,7 +33,7 @@
 
 */
 
-export default function (babel, { ns = "__V__" } = {}) {
+export default function transpilePlugin(babel, { ns = "__V__" } = {}) {
   const { types: t } = babel;
 
   function json(data) {

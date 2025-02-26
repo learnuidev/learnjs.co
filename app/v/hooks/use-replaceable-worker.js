@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 import { useRef } from "react";
 
 export function useReplacableWorker(onMessage) {

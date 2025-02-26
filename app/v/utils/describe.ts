@@ -1,6 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 // Usage:
 // description = [node, heap] = describe(value)
-export function describe(value, heap = [], map = new Map()) {
+export function describe(value: any, heap = [] as any, map = new Map()) {
   if (typeof value === "string") {
     return [{ category: "primitive", type: "string", value }, heap];
   } else if (typeof value === "boolean") {
@@ -22,7 +24,7 @@ export function describe(value, heap = [], map = new Map()) {
     const at = heap.length;
     map.set(value, at);
 
-    const obj = { type: "object", entries: [] };
+    const obj = { type: "object", entries: [] } as any;
     heap.push(obj);
 
     if (typeof value === "function") {
@@ -47,8 +49,9 @@ export function describe(value, heap = [], map = new Map()) {
 
 // Usage:
 // value = undescribe(description = [node, heap])
-const FAKE_CONSTRUCTORS = {};
-export function undescribe([node, heap], revived = []) {
+const FAKE_CONSTRUCTORS = {} as any;
+export function undescribe(vals: any, revived = [] as any) {
+  const [node, heap] = vals;
   if (node.category === "primitive") {
     if (node.type === "symbol") {
       const m = (node.str || "").match(/^Symbol\((.*)\)$/);
@@ -61,7 +64,7 @@ export function undescribe([node, heap], revived = []) {
   }
 
   const obj = heap[node.at];
-  let value = {};
+  let value = {} as any;
 
   if (obj.type === "function") {
     value = (() => () => {})(); // To avoid the transpiler naming it `f value()`
@@ -76,9 +79,10 @@ export function undescribe([node, heap], revived = []) {
       eval(`function ${obj.cname}(){}; ${obj.cname}`))();
   }
 
-  revived[node.at] = value;
+  revived[node.at as any] = value;
 
-  obj.entries.forEach(([key, node]) => {
+  obj.entries.forEach((v: any) => {
+    const [key, node] = v;
     value[key] = undescribe([node, heap], revived);
   });
 

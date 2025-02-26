@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useRef } from "react";
 
-export function useMostRecent(value, initial) {
+export function useMostRecent(value: any, initial: any) {
   const mostRecentRef = useRef(value || initial);
 
   if (value) {
