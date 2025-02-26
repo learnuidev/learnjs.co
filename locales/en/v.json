@@ -11,5 +11,6 @@
   "executed": "executed",
   "evaluated": "evaluated",
   "to.the.value": "...to the value:",
-  "anonymous": "anonymous"
+  "anonymous": "anonymous",
+  "custom.scope": "{{custom}} scope"
 }

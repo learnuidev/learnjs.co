@@ -1,15 +1,16 @@
 {
   "step": "步骤",
-  "scope": "范围",
+  "scope": "作用域",
   "console": "控制台",
-  "global.scope": "全局范围",
-  "no.variables": "在此作用域中没有变量",
-  "async.operation.waiting": "异步操作。等待中...",
+  "global.scope": "全局作用域",
+  "no.variables": "当前作用域中没有变量",
+  "async.operation.waiting": "异步操作，等待中...",
   "not.started": "未开始",
   "about.to.evaluate": "即将评估",
   "about.to.execute": "即将执行",
   "executed": "已执行",
   "evaluated": "已评估",
-  "to.the.value": "...到价值：",
-  "anonymous": "匿名"
+  "to.the.value": "...到值：",
+  "anonymous": "匿名",
+  "custom.scope": "{{custom}} 作用域"
 }

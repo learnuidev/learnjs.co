@@ -1,11 +1,18 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { useTranslation } from "@/lib/i18n-next/use-translation";
+
 import { cn } from "@/lib/utils";
 import { DogIcon } from "lucide-react";
+import { Trans } from "react-i18next";
 
-export const ScopeList = ({ step }: any) => {
+const getScopeName = ({ step, steps, at, scopeIndex }: any) => {
+  return `inner [${scopeIndex}]`;
+};
+
+export const ScopeList = ({ step, steps, at }: any) => {
   const { t } = useTranslation(["v"]);
 
   const styleMap = {
@@ -37,14 +44,29 @@ export const ScopeList = ({ step }: any) => {
               <div
                 className={cn(
                   isGlobalScope ? "bg-yellow-400" : styleMap[j],
-                  "p-4 rounded-xl"
+                  "p-4 rounded-xl my-4"
                 )}
               >
-                {isGlobalScope && (
-                  <div className="font-bold"> {t("v:global.scope")} </div>
+                {childrenScopes}
+                {isGlobalScope ? (
+                  <div className="font-bold mb-4"> {t("v:global.scope")} </div>
+                ) : (
+                  <div className="font-bold mb-4">
+                    <Trans
+                      i18nKey={"v:custom.scope"}
+                      values={{
+                        custom: getScopeName({
+                          steps,
+                          step,
+                          at,
+                          scopeIndex: j,
+                        }),
+                      }}
+                    />
+                  </div>
                 )}
                 {bindings.length === 0 && (
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2 my-4">
                     <span className="font-bold">
                       <DogIcon />
                     </span>
@@ -52,10 +74,11 @@ export const ScopeList = ({ step }: any) => {
                     <span> {t("v:no.variables")}</span>
                   </div>
                 )}
-                <code className="block">
-                  <pre>{stringifiedScope}</pre>
-                </code>
-                {childrenScopes}
+                {bindings.length === 0 ? null : (
+                  <code className="block">
+                    <pre>{stringifiedScope}</pre>
+                  </code>
+                )}
               </div>
             );
           },

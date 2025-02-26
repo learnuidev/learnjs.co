@@ -12,6 +12,8 @@ import "./prism.css";
 export function V() {
   const { steps, at, code, set_at, set_code, step, error, logs } = useVState();
 
+  console.log("step", step);
+
   return (
     <section className="mt-8">
       <div className="flex gap-12 items-center flex-row mt-12">
@@ -36,8 +38,7 @@ export function V() {
 
         <div className="col-span-12 sm:col-span-5 flex flex-col gap-8">
           <VStep step={step} />
-
-          <VScope step={step} />
+          <VScope step={step} steps={steps} at={at} />
           <VConsole logs={logs} error={error} />
         </div>
       </div>

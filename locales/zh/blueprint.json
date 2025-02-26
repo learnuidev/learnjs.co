@@ -1,15 +1,15 @@
 {
   "blueprint.title": "蓝图",
-  "blueprint.description": "在 learnjs.co，我们的蓝图很简单：教授基于现实世界示例的实用、可复制和有用的概念。",
-  "blueprint.why.title": "从为什么开始？",
-  "blueprint.why.content.one": "在我们开始教授任何概念之前，我们总是会先问这个基本问题：为什么？我们为什么要学习它？提出这个问题可以帮助我们建立正确的上下文。",
-  "blueprint.why.content.two": "这样一来，你会更好地为实际学习材料做好准备和激励。如果我们不知道为什么要学习，那么很容易就会忘记，甚至无法理解我们学习它的原因。",
+  "blueprint.description": "在 learnjs.co，我们的蓝图很简单：教授基于现实世界示例的实用、可复制且有用的概念。",
+  "blueprint.why.title": "为什么从“为什么”开始？",
+  "blueprint.why.content.one": "在教授任何概念之前，我们总是会问一个基本问题：为什么？我们为什么要学习它？提出这个问题有助于建立正确的上下文。",
+  "blueprint.why.content.two": "这样一来，你会更有动力并为实际学习材料做好准备。如果我们不知道为什么要学习，很容易就会忘记，甚至无法理解学习它的原因。",
   "blueprint.practical.title": "简短、实用、基于现实世界的代码库",
   "blueprint.practical.content.one": "我们专注于基于现实世界代码库的简短实用课程。",
   "blueprint.practical.content.two": "这种方法确保你学习的技能在实际开发场景中立即有效。",
-  "blueprint.practical.content.three": "通过将我们的课程基础设定在现实世界的例子中，我们使学习过程更加相关且引人入胜。",
+  "blueprint.practical.content.three": "通过将课程基础设定在现实世界的例子中，我们使学习过程更加相关且引人入胜。",
   "blueprint.learning-path.title": "灵活的学习路径",
   "blueprint.learning-path.content.one": "每一课都是独立的，意味着它不依赖于其他任何一课。",
-  "blueprint.learning-path.content.two": "无论你想采取线性方法，还是只是想学习特定的概念，这都取决于你。",
-  "blueprint.learning-path.content.three": "你掌握着（而且应该掌握）你的学习。"
+  "blueprint.learning-path.content.two": "无论你想采取线性方法，还是只想学习特定的概念，这都取决于你。",
+  "blueprint.learning-path.content.three": "你掌握着（而且应该掌握）你的学习进度。"
 }
