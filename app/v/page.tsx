@@ -20,6 +20,7 @@ import "./prism.css";
 import { add_waiting_time_steps } from "./utils/add-waiting-time-steps";
 import { undescribe } from "./utils/describe";
 import { useTranslation } from "@/lib/i18n-next/use-translation";
+import { DogIcon } from "lucide-react";
 
 export default function V() {
   // @ts-ignore
@@ -78,6 +79,8 @@ export default function V() {
     .map((s: any) => s?.logs || [])
     .flat();
 
+  console.log("step", step);
+
   return (
     <main className="mt-4 mx-0 mb-8">
       <section className="mt-8">
@@ -97,6 +100,14 @@ export default function V() {
             <Editor
               value={code}
               onValueChange={(str) => {
+                if (str !== code && at !== 0) {
+                  set_at(0);
+                }
+                console.log(str);
+                if (str.trim() === "" && at !== 0) {
+                  set_at(0);
+                  // alert("empty");
+                }
                 set_code(str);
               }}
               highlight={(code) => {
@@ -108,6 +119,7 @@ export default function V() {
                 fontSize: 18,
                 lineHeight: 1.5,
               }}
+              className="outline-none"
               preClassName="language-js"
               textareaClassName="Code"
             />
@@ -119,9 +131,21 @@ export default function V() {
 
               <div className="mt-4">
                 {step?.category === "init" ? (
-                  <div>init</div>
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="font-bold">
+                      <DogIcon />
+                    </span>
+
+                    <span> {t("v:not.started")}</span>
+                  </div>
                 ) : step?.category === "wait" ? (
-                  <div>async operation waiting...</div>
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="font-bold">
+                      <DogIcon />
+                    </span>
+
+                    <span> {t("v:async.operation.waiting")}</span>
+                  </div>
                 ) : (
                   step?.time &&
                   step?.category &&
@@ -131,24 +155,22 @@ export default function V() {
                       <p>
                         <strong style={{ color: theme[step.time].fg }}>
                           {step.time === "before"
-                            ? `about to ${
-                                step.category === "expression"
-                                  ? "evaluate"
-                                  : "execute"
-                              }`
+                            ? step.category === "expression"
+                              ? t("v:about.to.evaluate")
+                              : t("v:about.to.execute")
                             : step.category === "statement"
-                              ? "executed"
-                              : "evaluated"}
+                              ? t("v:executed")
+                              : t("v:evaluated")}
                         </strong>{" "}
                         {step.category}
                         <br />
-                        {/* <span>
-                        (of type <strong>{step.type}</strong>)
-                      </span> */}
                       </p>
                       {step.time === "after" &&
                         step.category === "expression" && (
-                          <p>&hellip;to the value:</p>
+                          <p>
+                            {t("v:to.the.value")}{" "}
+                            <span>{JSON.stringify(step?.value)}</span>
+                          </p>
                         )}
                     </div>
                   )
@@ -195,11 +217,6 @@ export default function V() {
                           isGlobalScope ? "bg-yellow-400" : styleMap[idx]
                         )}
                       >
-                        {bindings.length === 0 && (
-                          <p>
-                            <em>(no variables in this scope)</em>
-                          </p>
-                        )}
                         {bindings.map(([variable, value], i) => {
                           return (
                             <div
@@ -214,12 +231,25 @@ export default function V() {
                           );
                         })}
 
-                        {isGlobalScope && (
-                          <div className="mb-2 font-bold">
-                            {" "}
-                            {t("v:global.scope")}{" "}
-                          </div>
-                        )}
+                        <div className="flex justify-between items-center mb-4">
+                          {bindings.length === 0 && (
+                            <div className="flex items-center gap-2">
+                              <span className="font-bold">
+                                <DogIcon />
+                              </span>
+
+                              <span> {t("v:no.variables")}</span>
+                            </div>
+                          )}
+
+                          {isGlobalScope && (
+                            <div className="font-bold">
+                              {" "}
+                              {t("v:global.scope")}{" "}
+                            </div>
+                          )}
+                        </div>
+
                         <code>
                           <pre>{stringifiedScope}</pre>
                         </code>

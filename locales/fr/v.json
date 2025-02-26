@@ -2,5 +2,13 @@
   "step": "Étape",
   "scope": "Portée",
   "console": "Console",
-  "global.scope": "portée globale"
+  "global.scope": "portée globale",
+  "no.variables": "pas de variables dans cette portée",
+  "async.operation.waiting": "opération asynchrone. attente...",
+  "not.started": "pas commencé",
+  "about.to.evaluate": "sur le point d'évaluer",
+  "about.to.execute": "sur le point d'exécuter",
+  "executed": "exécuté",
+  "evaluated": "évalué",
+  "to.the.value": "...vers la valeur :"
 }

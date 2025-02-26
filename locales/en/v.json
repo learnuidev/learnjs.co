@@ -2,5 +2,13 @@
   "step": "Step",
   "scope": "Scope",
   "console": "Console",
-  "global.scope": "global scope"
+  "global.scope": "global scope",
+  "no.variables": "no variables in this scope",
+  "async.operation.waiting": "async operation. waiting...",
+  "not.started": "not started",
+  "about.to.evaluate": "about to evaluate",
+  "about.to.execute": "about to execute",
+  "executed": "executed",
+  "evaluated": "evaluated",
+  "to.the.value": "...to the value:"
 }

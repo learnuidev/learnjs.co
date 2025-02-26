@@ -1,3 +1,9 @@
+.Code {
+  white-space: pre !important;
+  /* overflow: hidden; */
+  outline: none;
+}
+
 /* // PRISM THEME */
 
 code[class*="language-"],

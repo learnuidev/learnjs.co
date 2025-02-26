@@ -2,5 +2,13 @@
   "step": "Paso",
   "scope": "Alcance",
   "console": "Consola",
-  "global.scope": "alcance global"
+  "global.scope": "alcance global",
+  "no.variables": "no hay variables en este alcance",
+  "async.operation.waiting": "operación asíncrona. esperando...",
+  "not.started": "no comenzado",
+  "about.to.evaluate": "a punto de evaluar",
+  "about.to.execute": "a punto de ejecutar",
+  "executed": "ejecutado",
+  "evaluated": "evaluado",
+  "to.the.value": "...al valor:"
 }
