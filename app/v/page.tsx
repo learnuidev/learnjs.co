@@ -83,7 +83,7 @@ export default function V() {
     .flat();
 
   return (
-    <main className="mt-4 mx-0">
+    <main className="mt-4 mx-0 mb-8">
       <section className="mt-8">
         <Slider
           className="mt-12"
