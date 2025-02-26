@@ -13,5 +13,15 @@
   "to.the.value": "...vers la valeur :",
   "anonymous": "anonyme",
   "custom.scope": "Portée {{custom}}",
-  "nothing.logged": "rien n'est enregistré pour le moment..."
+  "nothing.logged": "rien n'est enregistré pour le moment...",
+  "first": "1er",
+  "second": "2ème",
+  "third": "3ème",
+  "fourth": "4ème",
+  "fifth": "5ème",
+  "sixth": "6ème",
+  "seventh": "7ème",
+  "eighth": "8ème",
+  "ninth": "9ème",
+  "tenth": "10ème"
 }

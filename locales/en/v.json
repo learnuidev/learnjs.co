@@ -13,5 +13,15 @@
   "to.the.value": "...to the value:",
   "anonymous": "anonymous",
   "custom.scope": "{{custom}} scope",
-  "nothing.logged": "nothing logged at the moment..."
+  "nothing.logged": "nothing logged at the moment...",
+  "first": "1st",
+  "second": "2nd",
+  "third": "3rd",
+  "fourth": "4th",
+  "fifth": "5th",
+  "sixth": "6th",
+  "seventh": "7th",
+  "eighth": "8th",
+  "ninth": "9th",
+  "tenth": "10th"
 }

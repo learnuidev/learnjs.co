@@ -13,5 +13,15 @@
   "to.the.value": "...al valor:",
   "anonymous": "anónimo",
   "custom.scope": "{{custom}} ámbito",
-  "nothing.logged": "no hay nada registrado en este momento..."
+  "nothing.logged": "no hay nada registrado en este momento...",
+  "first": "1.º",
+  "second": "2.º",
+  "third": "3.º",
+  "fourth": "4.º",
+  "fifth": "5.º",
+  "sixth": "6.º",
+  "seventh": "7.º",
+  "eighth": "8.º",
+  "ninth": "9.º",
+  "tenth": "10.º"
 }

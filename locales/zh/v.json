@@ -13,5 +13,15 @@
   "to.the.value": "...到值：",
   "anonymous": "匿名",
   "custom.scope": "{{custom}} 作用域",
-  "nothing.logged": "当前没有日志记录..."
+  "nothing.logged": "当前没有日志记录...",
+  "first": "第一",
+  "second": "第二",
+  "third": "第三",
+  "fourth": "第四",
+  "fifth": "第五",
+  "sixth": "第六",
+  "seventh": "第七",
+  "eighth": "第八",
+  "ninth": "第九",
+  "tenth": "第十"
 }

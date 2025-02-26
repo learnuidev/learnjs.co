@@ -8,10 +8,6 @@ import { cn } from "@/lib/utils";
 import { DogIcon } from "lucide-react";
 import { Trans } from "react-i18next";
 
-const getScopeName = ({ step, steps, at, scopeIndex }: any) => {
-  return `inner [${scopeIndex}]`;
-};
-
 export const ScopeList = ({ step, steps, at }: any) => {
   const { t } = useTranslation(["v"]);
 
@@ -20,6 +16,23 @@ export const ScopeList = ({ step, steps, at }: any) => {
     1: "bg-green-400",
     2: "bg-orange-400",
   } as any;
+
+  const scopeTitle = {
+    1: t("v:first"),
+    2: t("v:second"),
+    3: t("v:third"),
+    4: t("v:fourth"),
+    5: t("v:fifth"),
+    6: t("v:sixth"),
+    7: t("v:seventh"),
+    8: t("v:eighth"),
+    9: t("v:ninth"),
+    10: t("v:tenth"),
+  } as any;
+
+  const getScopeName = ({ step, steps, at, scopeIndex }: any) => {
+    return `${scopeTitle?.[scopeIndex + 1] || `${scopeIndex + 1}th`}`;
+  };
 
   return (
     <div className="mt-4 space-y-4">
