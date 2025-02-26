@@ -12,5 +12,6 @@
   "evaluated": "évalué",
   "to.the.value": "...vers la valeur :",
   "anonymous": "anonyme",
-  "custom.scope": "Portée {{custom}}"
+  "custom.scope": "Portée {{custom}}",
+  "nothing.logged": "rien n'est enregistré pour le moment..."
 }

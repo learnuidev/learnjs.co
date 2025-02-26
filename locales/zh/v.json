@@ -12,5 +12,6 @@
   "evaluated": "已评估",
   "to.the.value": "...到值：",
   "anonymous": "匿名",
-  "custom.scope": "{{custom}} 作用域"
+  "custom.scope": "{{custom}} 作用域",
+  "nothing.logged": "当前没有日志记录..."
 }

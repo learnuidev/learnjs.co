@@ -9,22 +9,26 @@ import { DogIcon } from "lucide-react";
 import "react-json-view-lite/dist/index.css";
 
 import theme from "./theme";
+import { camelCaseToSpaced } from "@/lib/formatting/utils/camel-case-to-spaced";
+import { NotStarted } from "./not-started";
+import { cn } from "@/lib/utils";
 
 export const VStep = ({ step }: any) => {
   const { t } = useTranslation(["v"]);
 
   return (
-    <Card className="bg-white dark:bg-black dark:text-white p-4 h-44">
+    <Card
+      className={cn(
+        "bg-white dark:bg-black dark:text-white p-4",
+        step?.category === "init" ? "" : "h-44"
+      )}
+    >
       <h4 className="font-bold text-2xl">{t("v:step")} </h4>
 
       <div className="mt-4">
         {step?.category === "init" ? (
-          <div className="flex items-center gap-2 mb-4">
-            <span className="font-bold">
-              <DogIcon />
-            </span>
-
-            <span> {t("v:not.started")}</span>
+          <div className="my-16">
+            <NotStarted />
           </div>
         ) : step?.category === "wait" ? (
           <div className="flex items-center gap-2 mb-4">
@@ -39,7 +43,12 @@ export const VStep = ({ step }: any) => {
           step?.category &&
           step?.type && (
             <div>
-              <p className="font-bold">{step.type}</p>
+              <p className="font-bold mb-2">
+                {camelCaseToSpaced(step.type)}
+                {step?.loc?.identifierName
+                  ? `: ${step?.loc?.identifierName}`
+                  : ``}
+              </p>
               <p>
                 <strong style={{ color: theme[step.time].fg }}>
                   {step.time === "before"

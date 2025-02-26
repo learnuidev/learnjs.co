@@ -12,5 +12,6 @@
   "evaluated": "evaluado",
   "to.the.value": "...al valor:",
   "anonymous": "anónimo",
-  "custom.scope": "{{custom}} ámbito"
+  "custom.scope": "{{custom}} ámbito",
+  "nothing.logged": "no hay nada registrado en este momento..."
 }
