@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import color from "color";
 
 const teal = "#4dd4aa";
@@ -19,6 +20,6 @@ const theme = {
     bg: teal,
     fg: color(teal).darken(0.2).string(),
   },
-};
+} as any;
 
 export default theme;

@@ -6,12 +6,18 @@ import React, {
   useCallback,
 } from "react";
 
+import "prismjs/components/prism-core";
+import "prismjs/components/prism-clike";
+import "prismjs/components/prism-javascript";
+
 import { highlight, languages } from "prismjs/components/prism-core";
 
 import theme from "./theme";
 
 const hpad = 3;
 const vpad = 1;
+
+console.log("LANGUA", languages);
 
 export function Highlight({ code, step }) {
   const container = useRef();
@@ -45,21 +51,6 @@ export function Highlight({ code, step }) {
     };
   }, [recalculateCharacterSize]);
 
-  let html;
-
-  console.log("LANGS", languages);
-  try {
-    html = highlight(
-      code + (code.split("\n").slice(-1)[0] === "" ? " " : ""),
-      languages.plain
-    );
-
-    console.log(html);
-  } catch (err) {
-    console.log("ERR", err);
-    html = "";
-  }
-
   return (
     <div
       ref={container}
@@ -74,7 +65,10 @@ export function Highlight({ code, step }) {
       <div
         style={{ zIndex: 20 }}
         dangerouslySetInnerHTML={{
-          __html: html,
+          __html: highlight(
+            code + (code.split("\n").slice(-1)[0] === "" ? " " : ""),
+            languages.js
+          ),
         }}
       />
       {ranges.length > 0 &&
