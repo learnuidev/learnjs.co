@@ -40,7 +40,7 @@ function setupWatchDog(info) {
 
   info.worker.addEventListener("message", ({ data }) => {
     if ("alive" in data) {
-      console.debug("still alive", data.alive);
+      // console.debug("still alive", data.alive);
       clearInterval(id);
       setTimer();
     }
