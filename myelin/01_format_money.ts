@@ -17,11 +17,26 @@ type CountryCode = keyof typeof CountryToCurrency;
 
 // Step 3: Define the Money type.
 // Money type is generic, and the currencyCode is strictly tied to the countryCode.
-type Money<T extends CountryCode = CountryCode> = {
+type Money<T extends CountryCode> = {
   amount: number;
   countryCode: T;
 };
 
+/**
+ * Formats a money object into a string representation with localised currency formatting.
+ * @template T - The type of the country code, which must be one of the keys in CountryToCurrency.
+ * @param {Money<T>} param0 - An object containing an amount and a countryCode.
+ * @returns A string representing the money value with localised currency formatting.
+ *
+ * @example
+ * ```typescript
+ * const usd100 = {amount: 100, countryCode: "us-US"};
+ * console.log(formatMoney(usd100)); // Outputs: $100.00
+ *
+ * const eur200 = {amount: 200, countryCode: "de-DE"};
+ * console.log(formatMoney(eur200)); // Outputs: €200.00
+ * ```
+ */
 function formatMoney<T extends CountryCode>({
   amount,
   countryCode,
@@ -39,6 +54,6 @@ function formatMoney<T extends CountryCode>({
 console.log(
   formatMoney({
     amount: 1000,
-    countryCode: "in-IN",
+    countryCode: "cn-CN",
   })
 );
