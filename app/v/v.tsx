@@ -8,6 +8,7 @@ import { VEditor } from "./components/v-editor";
 import { VScope } from "./components/v-scope";
 import { useVState } from "./hooks/use-v-state";
 import "./prism.css";
+import Link from "next/link";
 
 export function V() {
   const { steps, at, code, set_at, set_code, step, error, logs } = useVState();
@@ -42,6 +43,31 @@ export function V() {
           <VConsole step={step} logs={logs} error={error} />
         </div>
       </div>
+
+      <p className="text-center mt-32 text-gray-500 font-extralight text-xs">
+        <span>
+          {" "}
+          This is inspired from{" "}
+          <span className="font-bold"> Kelly Van Everts</span>:{" "}
+        </span>
+        <Link
+          className="underline"
+          target="_blank"
+          href="https://jsviz.klve.nl"
+        >
+          {"JavaScript visualizer"}
+        </Link>
+        .{" "}
+        <span>
+          <Link
+            className="underline"
+            href="https://github.com/kelleyvanevert/js_visualized_v2"
+            target="_blank"
+          >
+            Source
+          </Link>
+        </span>
+      </p>
     </section>
   );
 }
