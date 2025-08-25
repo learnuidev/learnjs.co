@@ -1,13 +1,34 @@
 {
-  "aiProvider": "openai",
-  "aiModel": "gpt-4o-mini",
+  "aiProviders": {
+    "fr": {
+      "aiModel": "deepseek-chat",
+      "aiProvider": "deepseek"
+    },
+    "es": {
+      "aiModel": "deepseek-chat",
+      "aiProvider": "deepseek"
+    },
+    "zh": {
+      "aiModel": "deepseek-chat",
+      "aiProvider": "deepseek"
+    }
+  },
   "sync": {
     "type": "local"
   },
   "locale": {
-    "sourceEntries": ["app", "components", "lib", "modules"],
+    "sourceEntries": [
+      "app",
+      "components",
+      "lib",
+      "modules"
+    ],
     "location": "locales",
     "sourceLanguage": "en",
-    "targetLanguages": ["fr", "es", "zh"]
+    "targetLanguages": [
+      "fr",
+      "es",
+      "zh"
+    ]
   }
 }

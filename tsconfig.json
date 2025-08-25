@@ -27,7 +27,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/v/hooks/use-code.js",
+    "app/v/hooks/use-code.ts",
     "app/v/data/presets.js",
     "app/v/components/highlight.jsx",
   ],

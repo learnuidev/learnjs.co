@@ -11,7 +11,17 @@ import { NotStarted } from "./not-started";
 import theme from "./theme";
 import { Wait } from "./wait";
 
-export const VStep = ({ step }: any) => {
+export const VStep = ({
+  step,
+}: {
+  step: {
+    category: "init" | "expression" | "statement";
+    value: string;
+    type: string;
+    time: string;
+    loc: any;
+  };
+}) => {
   const { t } = useTranslation(["v"]);
 
   return (
@@ -29,7 +39,8 @@ export const VStep = ({ step }: any) => {
             {step?.time && step?.category && step?.type && (
               <div>
                 <p className="font-bold mb-2">
-                  {camelCaseToSpaced(step.type)}
+                  {t(`v:${step.type}`, camelCaseToSpaced(step.type))}
+
                   {step?.loc?.identifierName
                     ? `: ${step?.loc?.identifierName}`
                     : ``}
@@ -44,7 +55,7 @@ export const VStep = ({ step }: any) => {
                         ? t("v:executed")
                         : t("v:evaluated")}
                   </strong>{" "}
-                  {step.category}
+                  {t(`v:${step.category}`, step.category)}
                   <br />
                 </p>
                 {step.time === "after" && step.category === "expression" && (

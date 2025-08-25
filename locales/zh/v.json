@@ -3,7 +3,7 @@
   "scope": "作用域",
   "console": "控制台",
   "global.scope": "全局作用域",
-  "no.variables": "当前作用域中没有变量",
+  "no.variables": "此作用域中无变量",
   "async.operation.waiting": "异步操作，等待中...",
   "not.started": "未开始",
   "about.to.evaluate": "即将评估",
@@ -13,7 +13,7 @@
   "to.the.value": "...到值：",
   "anonymous": "匿名",
   "custom.scope": "{{custom}} 作用域",
-  "nothing.logged": "当前没有日志记录...",
+  "nothing.logged": "当前无日志记录...",
   "first": "第一",
   "second": "第二",
   "third": "第三",
@@ -23,5 +23,14 @@
   "seventh": "第七",
   "eighth": "第八",
   "ninth": "第九",
-  "tenth": "第十"
+  "tenth": "第十",
+  "expression": "表达式",
+  "statement": "语句",
+  "init": "初始化",
+  "Variable Declaration": "变量声明",
+  "VariableDeclaration": "变量声明",
+  "ArrowFunctionExpression": "箭头函数表达式",
+  "Identifier": "标识符",
+  "NumericLiteral": "数字字面量",
+  "ReturnStatement": "返回语句"
 }

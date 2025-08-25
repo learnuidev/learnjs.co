@@ -23,5 +23,13 @@
   "seventh": "7th",
   "eighth": "8th",
   "ninth": "9th",
-  "tenth": "10th"
+  "tenth": "10th",
+  "expression": "expression",
+  "statement": "statement",
+  "init": "init",
+  "VariableDeclaration": "Variable Declaration",
+  "ArrowFunctionExpression": "Arrow Function Expression",
+  "Identifier": "Identifier",
+  "NumericLiteral": "Numeric Literal",
+  "ReturnStatement": "Return Statement"
 }

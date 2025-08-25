@@ -1,15 +1,15 @@
 {
   "blueprint.title": "El Plan",
-  "blueprint.description": "En learnjs.co, nuestro Plan es simple: Enseñar conceptos prácticos, copypasteables y útiles basados en ejemplos del mundo real.",
-  "blueprint.why.title": "¿Por qué empezar con el POR QUÉ?",
-  "blueprint.why.content.one": "Antes de comenzar a enseñar cualquier concepto, siempre comenzamos con esta pregunta fundamental: ¿POR QUÉ? ¿Por qué necesitamos aprenderlo? Hacer esta pregunta nos permite establecer el contexto adecuado.",
+  "blueprint.description": "En learnjs.co, nuestro Plan es simple: Enseñar conceptos prácticos, copiables y útiles basados en ejemplos del mundo real.",
+  "blueprint.why.title": "Comienza con el PORQUÉ",
+  "blueprint.why.content.one": "Antes de comenzar a enseñar cualquier concepto, siempre comenzamos con esta pregunta fundamental: ¿POR QUÉ? ¿Por qué necesitamos aprenderlo? Hacer esta pregunta nos permite establecer el contexto correcto.",
   "blueprint.why.content.two": "Como resultado, estarás mejor preparado y motivado para el material de aprendizaje real. Si no sabemos por qué estamos aprendiendo, es muy fácil olvidar o incluso no apreciar por qué lo estamos aprendiendo.",
   "blueprint.practical.title": "Corto, Práctico, Basado en Código del Mundo Real",
-  "blueprint.practical.content.one": "Nos enfocamos en lecciones cortas y prácticas que se basan en código del mundo real.",
-  "blueprint.practical.content.two": "Este enfoque asegura que aprendas habilidades aplicables que son inmediatamente útiles en escenarios de desarrollo reales.",
-  "blueprint.practical.content.three": "Al fundamentar nuestras lecciones en ejemplos del mundo real, hacemos que el proceso de aprendizaje sea más relevante y atractivo.",
+  "blueprint.practical.content.one": "Nos enfocamos en lecciones cortas y prácticas que se basan en bases de código del mundo real.",
+  "blueprint.practical.content.two": "Este enfoque garantiza que aprendas habilidades aplicables que son inmediatamente útiles en escenarios de desarrollo reales.",
+  "blueprint.practical.content.three": "Al basar nuestras lecciones en ejemplos del mundo real, hacemos que el proceso de aprendizaje sea más relevante y atractivo.",
   "blueprint.learning-path.title": "Ruta de Aprendizaje Flexible",
-  "blueprint.learning-path.content.one": "Cada lección es autosuficiente, lo que significa que no depende de otras.",
-  "blueprint.learning-path.content.two": "Ya sea que quieras seguir un enfoque lineal o simplemente quieras aprender sobre un concepto específico, depende de TI.",
+  "blueprint.learning-path.content.one": "Cada lección es independiente, lo que significa que no depende de ninguna otra.",
+  "blueprint.learning-path.content.two": "Ya sea que quieras tomar el enfoque lineal o simplemente aprender sobre un concepto específico, depende de TI.",
   "blueprint.learning-path.content.three": "Tú estás a cargo (y deberías estarlo) de tu aprendizaje."
 }
