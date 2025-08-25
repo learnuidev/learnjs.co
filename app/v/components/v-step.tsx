@@ -39,7 +39,7 @@ export const VStep = ({
             {step?.time && step?.category && step?.type && (
               <div>
                 <p className="font-bold mb-2">
-                  {t(`v:${step.type}`, camelCaseToSpaced(step.type))}
+                  {camelCaseToSpaced(step.type)}
 
                   {step?.loc?.identifierName
                     ? `: ${step?.loc?.identifierName}`
@@ -55,7 +55,8 @@ export const VStep = ({
                         ? t("v:executed")
                         : t("v:evaluated")}
                   </strong>{" "}
-                  {t(`v:${step.category}`, step.category)}
+                  {/* {t(`v:${step.category}`, step.category)} */}
+                  {step.category}
                   <br />
                 </p>
                 {step.time === "after" && step.category === "expression" && (
